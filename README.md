@@ -18,6 +18,7 @@ A user-friendly project designed to manage and track attendance efficiently. Ide
    - ![image](https://github.com/user-attachments/assets/43d7a272-21c3-4968-a663-2f54fa4c53b3)
 
    - Extract the ZIP file to your desired location.
+   - make sure the keras model and labels are also in the same directory
 
 2. **Run the Project**:
    - Open the attendance_record file ( `code.py`) to launch the application.
