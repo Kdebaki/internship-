@@ -28,7 +28,7 @@ A user-friendly project designed to manage and track attendance efficiently. Ide
    - pip install tensorflow==2.10.0
    - pip install opencv-python==4.5.5.64
    - pip install numpy==1.21.6
-   - 
+   - run the code
 3. **Customize as Needed**:
    - Edit files to fit your requirements.
    - Add custom branding or functionality.
