@@ -33,6 +33,9 @@ Export the Model:
 If you're satisfied with the model's performance, you can export it for use in various applications.
 Teachable Machine offers options to download the model or host it online.
 
+
+## How to Download
+
 1. **Download the Files**:
    - Click the green **Code** button at the top of the repository.
    - ![image](https://github.com/user-attachments/assets/597b4581-f49a-4c25-bfd2-4d71bf3c902e)
@@ -57,7 +60,8 @@ Teachable Machine offers options to download the model or host it online.
    - Edit files to fit your requirements.
    - Add custom branding or functionality.
    - 
-3. **Code Explaination**:
+## code explaination
+
 4. This Python script utilizes TensorFlow's Keras API and OpenCV to perform real-time image classification through a webcam. Here's a breakdown of its functionality:
 
 Import Necessary Libraries:
