@@ -1,4 +1,4 @@
-## How to Train, Download and Use
+![image](https://github.com/user-attachments/assets/455ad0a8-46cf-4f0b-bf63-e1e70b0c7f2d)## How to Train, Download and Use
 1. **training the model**:
 
 Training a model using Google's Teachable Machine is a straightforward process that allows you to create machine learning models without extensive coding knowledge. Here's how you can get started:
@@ -47,7 +47,7 @@ Teachable Machine offers options to download the model or host it online.
    - make sure the keras model and labels are also in the same directory
 
 2. **Run the Project**:
-   - Open the attendance_record file ( `code.py`) to launch the application.
+   - Open the aface_recog file ( `1.py`) to launch the application.
    - ![image](https://github.com/user-attachments/assets/b9b03de3-067b-4d7c-8ca6-033c679c71cd)
 
    - install necessary libraries in the terminal 
@@ -56,6 +56,10 @@ Teachable Machine offers options to download the model or host it online.
    - pip install opencv-python==4.5.5.64
    - pip install numpy==1.21.6
    - run the code
+   - ![image](https://github.com/user-attachments/assets/97164252-e5b5-4a4d-b0d4-1b8e0c1f75e3)
+   - ![image](https://github.com/user-attachments/assets/987c3373-08f2-49a3-b1ff-0ee85d5b625b)
+
+
 3. **Customize as Needed**:
    - Edit files to fit your requirements.
    - Add custom branding or functionality.
@@ -64,48 +68,48 @@ Teachable Machine offers options to download the model or host it online.
 
 4. This Python script utilizes TensorFlow's Keras API and OpenCV to perform real-time image classification through a webcam. Here's a breakdown of its functionality:
 
-Import Necessary Libraries:
+•Import Necessary Libraries:
 tensorflow.keras.models: For loading the pre-trained Keras model.
 cv2 (OpenCV): For accessing the webcam and handling image processing tasks.
 
 numpy: For numerical operations, particularly array manipulations.
 
-Configure Numpy Print Options:
+•Configure Numpy Print Options:
 np.set_printoptions(suppress=True): Disables scientific notation in numpy printouts for better readability.
 
-Load the Pre-trained Model:
+•Load the Pre-trained Model:
 model = load_model("keras_Model.h5", compile=False): Loads the pre-trained Keras model from the specified .h5 file without compiling it, as it's unnecessary for inference.
 
-Load Class Labels:
+•Load Class Labels:
 class_names = open("labels.txt", "r").readlines(): Reads the class labels from labels.txt into a list, where each line corresponds to a class name.
 
-Initialize Webcam:
+•Initialize Webcam:
 camera = cv2.VideoCapture(0): Opens a connection to the default webcam (device 0).
-Real-time Image Processing Loop:
 
+•Real-time Image Processing Loop:
 The script enters an infinite loop to continuously capture frames from the webcam.
 ret, image = camera.read(): Captures a frame from the webcam.
 image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA): Resizes the captured image to 224x224 pixels, matching the input size expected by the model.
 cv2.imshow("Webcam Image", image): Displays the resized image in a window titled "Webcam Image".
 
-Pre-process the Image:
+•Pre-process the Image:
 image = np.asarray(image, dtype=np.float32).reshape(1, 224, 224, 3): Converts the image to a numpy array of type float32 and reshapes it to match the model's input dimensions.
 image = (image / 127.5) - 1: Normalizes the image data to the range [-1, 1], assuming the model was trained with this normalization.
 
-Model Prediction:
+•Model Prediction:
 prediction = model.predict(image): Feeds the pre-processed image into the model to obtain predictions.
 index = np.argmax(prediction): Identifies the index of the highest confidence score in the prediction array.
 class_name = class_names[index]: Retrieves the class name corresponding to the highest confidence score.
 confidence_score = prediction[0][index]: Extracts the confidence score for the predicted class.
 
-Display Prediction and Confidence:
+•Display Prediction and Confidence:
 Prints the predicted class name and its confidence score to the console.
 
-Exit Condition:
+•Exit Condition:
 keyboard_input = cv2.waitKey(1): Listens for keyboard input.
 If the 'Esc' key (ASCII code 27) is pressed, the loop breaks, terminating the program.
 
-Release Resources:
+•Release Resources:
 camera.release(): Releases the webcam resource.
 cv2.destroyAllWindows(): Closes any OpenCV windows opened during execution.
 
