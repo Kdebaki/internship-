@@ -1,4 +1,38 @@
 ## How to Download and Use
+1. **training the model**:
+
+Training a model using Google's Teachable Machine is a straightforward process that allows you to create machine learning models without extensive coding knowledge. Here's how you can get started:
+
+Access Teachable Machine:
+Navigate to the Teachable Machine website.
+![image](https://github.com/user-attachments/assets/bd231120-86ee-4fa1-8983-11f757856359)
+
+Choose a Project Type:
+![image](https://github.com/user-attachments/assets/3c01eac4-e2f6-4c34-a2f8-8d8f993ed606)
+
+Select the type of model you wish to train:
+
+Image Project: For classifying images.
+![image](https://github.com/user-attachments/assets/f40d4c20-c5f4-4989-b32a-0a29ccbd049e)
+
+For Image Projects:
+Upload images from your device or use your webcam to capture photos directly into each class.
+![image](https://github.com/user-attachments/assets/0b34b66c-9237-424e-84eb-3743841f4dbb)
+
+Once you've gathered sufficient data for each class, click the "Train Model" button.
+The platform will process the data and train a model based on your inputs.
+![image](https://github.com/user-attachments/assets/af7fbc85-a260-49aa-9336-401f3eb9f3fc)
+
+Test the Model:
+
+After training, test your model by providing new inputs (images, sounds, or poses) to see how accurately it classifies them.
+Export the Model:
+![image](https://github.com/user-attachments/assets/91770d4e-9af9-4fb8-9b47-011ec46f3e52)
+
+
+If you're satisfied with the model's performance, you can export it for use in various applications.
+Teachable Machine offers options to download the model or host it online.
+
 1. **Download the Files**:
    - Click the green **Code** button at the top of the repository.
    - ![image](https://github.com/user-attachments/assets/597b4581-f49a-4c25-bfd2-4d71bf3c902e)
