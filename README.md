@@ -22,6 +22,54 @@
 3. **Customize as Needed**:
    - Edit files to fit your requirements.
    - Add custom branding or functionality.
+   - 
+  **code explaination **
+4. This Python script utilizes TensorFlow's Keras API and OpenCV to perform real-time image classification through a webcam. Here's a breakdown of its functionality:
+
+Import Necessary Libraries:
+
+tensorflow.keras.models: For loading the pre-trained Keras model.
+cv2 (OpenCV): For accessing the webcam and handling image processing tasks.
+numpy: For numerical operations, particularly array manipulations.
+Configure Numpy Print Options:
+
+np.set_printoptions(suppress=True): Disables scientific notation in numpy printouts for better readability.
+Load the Pre-trained Model:
+
+model = load_model("keras_Model.h5", compile=False): Loads the pre-trained Keras model from the specified .h5 file without compiling it, as it's unnecessary for inference.
+Load Class Labels:
+
+class_names = open("labels.txt", "r").readlines(): Reads the class labels from labels.txt into a list, where each line corresponds to a class name.
+Initialize Webcam:
+
+camera = cv2.VideoCapture(0): Opens a connection to the default webcam (device 0).
+Real-time Image Processing Loop:
+
+The script enters an infinite loop to continuously capture frames from the webcam.
+ret, image = camera.read(): Captures a frame from the webcam.
+image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA): Resizes the captured image to 224x224 pixels, matching the input size expected by the model.
+cv2.imshow("Webcam Image", image): Displays the resized image in a window titled "Webcam Image".
+Pre-process the Image:
+
+image = np.asarray(image, dtype=np.float32).reshape(1, 224, 224, 3): Converts the image to a numpy array of type float32 and reshapes it to match the model's input dimensions.
+image = (image / 127.5) - 1: Normalizes the image data to the range [-1, 1], assuming the model was trained with this normalization.
+Model Prediction:
+
+prediction = model.predict(image): Feeds the pre-processed image into the model to obtain predictions.
+index = np.argmax(prediction): Identifies the index of the highest confidence score in the prediction array.
+class_name = class_names[index]: Retrieves the class name corresponding to the highest confidence score.
+confidence_score = prediction[0][index]: Extracts the confidence score for the predicted class.
+Display Prediction and Confidence:
+
+Prints the predicted class name and its confidence score to the console.
+Exit Condition:
+
+keyboard_input = cv2.waitKey(1): Listens for keyboard input.
+If the 'Esc' key (ASCII code 27) is pressed, the loop breaks, terminating the program.
+Release Resources:
+
+camera.release(): Releases the webcam resource.
+cv2.destroyAllWindows(): Closes any OpenCV windows opened during execution.
 
 
 ## Contribution
