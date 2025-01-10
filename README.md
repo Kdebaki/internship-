@@ -23,7 +23,7 @@
    - Edit files to fit your requirements.
    - Add custom branding or functionality.
    - 
-  **code explaination **
+3. **Code Explaination**:
 4. This Python script utilizes TensorFlow's Keras API and OpenCV to perform real-time image classification through a webcam. Here's a breakdown of its functionality:
 
 Import Necessary Libraries:
