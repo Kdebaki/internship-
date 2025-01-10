@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/455ad0a8-46cf-4f0b-bf63-e1e70b0c7f2d)## How to Train, Download and Use
+## How to Train, Download and Use
 1. **training the model**:
 
 Training a model using Google's Teachable Machine is a straightforward process that allows you to create machine learning models without extensive coding knowledge. Here's how you can get started:
